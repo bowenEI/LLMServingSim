@@ -27,3 +27,8 @@ astra-sim/inputs/runs/
 .copilot/
 .aider*
 .continue/
+
+# Agent skill hub cache (installed from external skill repos)
+.agents/
+skills-lock.json
+
