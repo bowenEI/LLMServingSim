@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="context-stroke"/></marker></defs>
+<text x="800" y="55" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="30" font-weight="700" fill="#17324D">计算、访存与通信时延如何汇聚为一次迭代</text>
+<text x="800" y="88" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="15" font-weight="400" fill="#60758A">测量驱动的计算节点 + 解析内存/网络节点 + DAG 关键路径</text>
+<polyline points="469.0909090909091,200.0 280,220 280,240 280.0,250.0" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="215" y="222" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="280" y="240" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">kernel shape</text>
+<polyline points="800.0,200.0 800,220 800,240 800.0,250.0" fill="none" stroke="#2A7F72" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="735" y="222" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="800" y="240" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2A7F72">bytes / tier</text>
+<polyline points="1130.909090909091,200.0 1320,220 1320,240 1320.0,250.0" fill="none" stroke="#C86F2D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1255" y="222" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1320" y="240" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#C86F2D">group / size</text>
+<polyline points="280.0,490 280.0,510.0 280.0,510.0 280.0,530" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="223.0" y="486.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="288" y="504" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">映射</text>
+<polyline points="280.0,580.0 280,600 800,600 800.0,620.0" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="735" y="582" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="800" y="600" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">COMP_NODE</text>
+<polyline points="800.0,490 800.0,510.0 800.0,510.0 800.0,530" fill="none" stroke="#2A7F72" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="743.0" y="486.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="808" y="504" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2A7F72">映射</text>
+<polyline points="800.0,580.0 800,600 800.0,620.0" fill="none" stroke="#2A7F72" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="735" y="582" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="800" y="600" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2A7F72">MEM_NODE</text>
+<polyline points="1320.0,490 1320.0,510.0 1320.0,510.0 1320.0,530" fill="none" stroke="#C86F2D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1263.0" y="486.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1328" y="504" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#C86F2D">映射</text>
+<polyline points="1320.0,580.0 1320,600 800,600 800.0,620.0" fill="none" stroke="#C86F2D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="735" y="582" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="800" y="600" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#C86F2D">COMM_NODE</text>
+<rect x="50" y="130" width="1500" height="70" rx="8" fill="#F4F7F9" stroke="#AAB7C4" stroke-width="2"/>
+<text x="800" y="158" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="19" font-weight="700" fill="#17324D">一次迭代的输入形状</text>
+<text x="800" y="185" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="400" fill="#17324D">x = (T, Nseq, prefill_chunk, kv_prefill, n_decode, kv_decode, TP, PP, EP, placement)</text>
+<rect x="60" y="250" width="440" height="240" rx="8" fill="#E8F2FA" stroke="#2F6B9A" stroke-width="2"/>
+<text x="280" y="278" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="24" font-weight="700" fill="#17324D">计算时延：测量驱动</text>
+<text x="280" y="305" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">CSV: time_us → round(1000·time_us) ns</text>
+<text x="280" y="327" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">1D: t(x)=t0+(x−x0)(t1−t0)/(x1−x0)</text>
+<text x="280" y="349" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Attention: 4D 多线性插值</text>
+<text x="280" y="371" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Skew: t=tmean+α(tmax−tmean)</text>
+<text x="280" y="393" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">MoE: max_r lookup(tokens_r, experts_r)</text>
+<rect x="580" y="250" width="440" height="240" rx="8" fill="#E7F4F1" stroke="#2A7F72" stroke-width="2"/>
+<text x="800" y="278" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="24" font-weight="700" fill="#17324D">访存时延：容量 + 排队</text>
+<text x="800" y="305" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">KV/token/rank = 2·Hkv·Dhead·L·bkv / Nnpu</text>
+<text x="800" y="327" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Nblock=floor((u·MNPU−W)/Bblock)</text>
+<text x="800" y="349" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">tmem(S)=Lmem+floor(S/Bmem)</text>
+<text x="800" y="371" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">PER_NODE / POOL：同设备 FIFO 串行</text>
+<text x="800" y="393" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">write-through 只计能耗；recall 在关键路径</text>
+<rect x="1100" y="250" width="440" height="240" rx="8" fill="#FFF0E3" stroke="#C86F2D" stroke-width="2"/>
+<text x="1320" y="278" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="24" font-weight="700" fill="#17324D">通信时延：消息 + collective</text>
+<text x="1320" y="305" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">TP: S_AR = T·H·b</text>
+<text x="1320" y="327" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">P/D: S_KV = 2·Hkv·Dhead·T·bkv / TP</text>
+<text x="1320" y="349" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">EP: AG[(H+E)b], RS[Hb]</text>
+<text x="1320" y="371" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">单跳: t=h·Llink+S/Blink</text>
+<text x="1320" y="393" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Ring 近似: AR≈2(N−1)(L+S/(N·B))</text>
+<rect x="180" y="620" width="1240" height="180" rx="8" fill="#FFFFFF" stroke="#17324D" stroke-width="2"/>
+<text x="800" y="648" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">统一为 Chakra DAG 的关键路径</text>
+<text x="800" y="675" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="16" font-weight="400" fill="#17324D">start(v)=max_{u∈pred(v)} finish(u)</text>
+<text x="800" y="697" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="16" font-weight="400" fill="#17324D">finish(v)=start(v)+d(v),  d(v)∈{tcomp,tmem,tcomm}</text>
+<text x="800" y="719" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="16" font-weight="400" fill="#17324D">Titer=max_{v∈sink} finish(v)；重叠由依赖与资源队列自然产生，而不是简单求和</text>
+<rect x="60" y="530" width="440" height="50" rx="8" fill="#E8F2FA" stroke="#2F6B9A" stroke-width="2"/>
+<text x="280" y="561" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="700" fill="#17324D">COMP_NODE · profile replay</text>
+<rect x="580" y="530" width="440" height="50" rx="8" fill="#E7F4F1" stroke="#2A7F72" stroke-width="2"/>
+<text x="800" y="561" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="700" fill="#17324D">MEM_NODE · analytical memory</text>
+<rect x="1100" y="530" width="440" height="50" rx="8" fill="#FFF0E3" stroke="#C86F2D" stroke-width="2"/>
+<text x="1320" y="561" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="700" fill="#17324D">COMM_NODE · analytical network</text>
+</svg>

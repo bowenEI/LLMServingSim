@@ -1,0 +1,8 @@
+{
+  "label": "并行",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "张量并行、流水线并行、专家并行与 DP+EP，了解每种方式在集群配置中的样子以及对调度的影响。"
+  }
+}

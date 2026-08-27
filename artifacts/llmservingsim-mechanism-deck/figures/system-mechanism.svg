@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="context-stroke"/></marker></defs>
+<text x="800" y="55" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="30" font-weight="700" fill="#17324D">LLMServingSim 2.0：周期级协同仿真的闭环机制</text>
+<text x="800" y="88" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="15" font-weight="400" fill="#60758A">Python 前端复现服务语义，Chakra 表达依赖，ASTRA-Sim 推进硬件事件</text>
+<polyline points="155.0,220 155.0,275.0 140.0,275.0 140.0,330" fill="none" stroke="#AAB7C4" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="98.0" y="251.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="163" y="269" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#AAB7C4">请求到达</text>
+<polyline points="260,175.0 290.0,175.0 290.0,175.0 320,175.0" fill="none" stroke="#AAB7C4" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="10 8"/>
+<rect x="225.0" y="149.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="290" y="167" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#AAB7C4">模型/硬件</text>
+<polyline points="560,175.0 590.0,175.0 590.0,175.0 620,175.0" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="525.0" y="149.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="590" y="167" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">time_us</text>
+<polyline points="735.0,220 735.0,260.0 925.0,260.0 925.0,300" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="868.0" y="236.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="933" y="254" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">按维查表</text>
+<polyline points="230,380.0 255.0,380.0 255.0,380.0 280,380.0" fill="none" stroke="#4D7C5D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="190.0" y="354.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="255" y="372" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#4D7C5D">入队</text>
+<polyline points="500,380.0 525.0,380.0 525.0,380.0 550,380.0" fill="none" stroke="#4D7C5D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="460.0" y="354.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="525" y="372" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#4D7C5D">调度快照</text>
+<polyline points="750,380.0 775.0,380.0 775.0,380.0 800,380.0" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="710.0" y="354.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="775" y="372" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">形状参数</text>
+<polyline points="1050,380.0 1075.0,380.0 1075.0,380.0 1100,380.0" fill="none" stroke="#2F6B9A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1010.0" y="354.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1075" y="372" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2F6B9A">11 字段 rows</text>
+<polyline points="1290,380.0 1315.0,380.0 1315.0,380.0 1340,380.0" fill="none" stroke="#C86F2D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1250.0" y="354.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1315" y="372" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#C86F2D">.et 工作负载</text>
+<polyline points="390.0,450 390.0,500.0 390.0,500.0 390.0,550" fill="none" stroke="#2A7F72" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="333.0" y="476.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="398" y="494" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2A7F72">分配/回收</text>
+<polyline points="500,625.0 525.0,625.0 525.0,625.0 550,625.0" fill="none" stroke="#2A7F72" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="460.0" y="599.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="525" y="617" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#2A7F72">块驻留/召回</text>
+<polyline points="925.0,460 925.0,515.0 935.0,515.0 935.0,570" fill="none" stroke="#AAB7C4" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="878.0" y="491.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="943" y="509" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#AAB7C4">节点属性</text>
+<polyline points="1030,625.0 1065.0,625.0 1065.0,625.0 1100,625.0" fill="none" stroke="#C86F2D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1000.0" y="599.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1065" y="617" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#C86F2D">就绪节点</text>
+<polyline points="1210.0,550 1210.0,505.0 1445.0,505.0 1445.0,460" fill="none" stroke="#C86F2D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1388.0" y="481.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1453" y="499" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#C86F2D">完成事件</text>
+<polyline points="1445.0,460 1445.0,490.0 1450.0,490.0 1450.0,520" fill="none" stroke="#4D7C5D" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1393.0" y="466.0" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1458" y="484" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#4D7C5D">cycle</text>
+<polyline points="1450.0,640.0 1450,750 1080,750 985.4545454545455,770.0" fill="none" stroke="#17324D" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="10 8"/>
+<rect x="1015" y="732" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="1080" y="750" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#17324D">完成通知</text>
+<polyline points="560.0,800.6666666666666 520,800 520,500 390,500 390.0,450.0" fill="none" stroke="#17324D" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="10 8"/>
+<rect x="455" y="482" width="130" height="25" rx="3" fill="#FFFFFF" opacity="0.94"/>
+<text x="520" y="500" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="14" font-weight="500" fill="#17324D">状态反馈</text>
+<rect x="50" y="130" width="210" height="90" rx="8" fill="#F4F7F9" stroke="#AAB7C4" stroke-width="2"/>
+<text x="155" y="158" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">配置与工作负载</text>
+<text x="155" y="185" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">cluster/model JSON</text>
+<text x="155" y="207" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">workload JSONL</text>
+<rect x="320" y="130" width="240" height="90" rx="8" fill="#E8F2FA" stroke="#2F6B9A" stroke-width="2"/>
+<text x="440" y="158" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">vLLM Layerwise Profiler</text>
+<text x="440" y="185" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">真实 kernel 路径</text>
+<text x="440" y="207" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">TP 单卡形状仿真</text>
+<rect x="620" y="130" width="230" height="90" rx="8" fill="#E8F2FA" stroke="#2F6B9A" stroke-width="2"/>
+<text x="735" y="158" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">性能数据库</text>
+<text x="735" y="185" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">dense / attention</text>
+<text x="735" y="207" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">per-seq / MoE CSV</text>
+<rect x="50" y="330" width="180" height="100" rx="8" fill="#F4F7F9" stroke="#AAB7C4" stroke-width="2"/>
+<text x="140" y="358" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Router</text>
+<text x="140" y="385" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">到达时间</text>
+<text x="140" y="407" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">实例路由</text>
+<rect x="280" y="310" width="220" height="140" rx="8" fill="#EAF3EC" stroke="#4D7C5D" stroke-width="2"/>
+<text x="390" y="338" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Scheduler</text>
+<text x="390" y="365" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">continuous batching</text>
+<text x="390" y="387" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">token/seq/KV 预算</text>
+<text x="390" y="409" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">running → waiting</text>
+<rect x="550" y="330" width="200" height="100" rx="8" fill="#EAF3EC" stroke="#4D7C5D" stroke-width="2"/>
+<text x="650" y="358" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Batch 快照</text>
+<text x="650" y="385" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">scheduled_tokens</text>
+<text x="650" y="407" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Q/K 列表与命中</text>
+<rect x="800" y="300" width="250" height="160" rx="8" fill="#E8F2FA" stroke="#2F6B9A" stroke-width="2"/>
+<text x="925" y="328" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Trace Generator</text>
+<text x="925" y="355" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">遍历架构 sequence</text>
+<text x="925" y="377" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">查表/插值 comp_time</text>
+<text x="925" y="399" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">tensor bytes + comm_size</text>
+<rect x="1100" y="320" width="190" height="120" rx="8" fill="#F4F7F9" stroke="#AAB7C4" stroke-width="2"/>
+<text x="1195" y="348" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Chakra Converter</text>
+<text x="1195" y="375" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">trace rows → ET DAG</text>
+<text x="1195" y="397" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">COMP/MEM/COMM</text>
+<rect x="1340" y="300" width="210" height="160" rx="8" fill="#FFF0E3" stroke="#C86F2D" stroke-width="2"/>
+<text x="1445" y="328" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">ASTRA-Sim</text>
+<text x="1445" y="355" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">依赖就绪发射</text>
+<text x="1445" y="377" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">解析网络 + 内存</text>
+<text x="1445" y="399" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">返回全局 cycle</text>
+<rect x="280" y="550" width="220" height="150" rx="8" fill="#E7F4F1" stroke="#2A7F72" stroke-width="2"/>
+<text x="390" y="578" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Tiered KV Manager</text>
+<text x="390" y="605" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">block hash / refcount</text>
+<text x="390" y="627" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">NPU 命中 + 下层召回</text>
+<text x="390" y="649" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">preemption/recompute</text>
+<rect x="550" y="570" width="210" height="110" rx="8" fill="#E7F4F1" stroke="#2A7F72" stroke-width="2"/>
+<text x="655" y="598" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">NPU / CPU / CXL</text>
+<text x="655" y="625" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">容量与块池</text>
+<text x="655" y="647" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">召回进入关键路径</text>
+<rect x="840" y="570" width="190" height="110" rx="8" fill="#F4F7F9" stroke="#AAB7C4" stroke-width="2"/>
+<text x="935" y="598" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Chakra ET DAG</text>
+<text x="935" y="625" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">数据依赖</text>
+<text x="935" y="647" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">关键路径决定完成时刻</text>
+<rect x="1100" y="550" width="220" height="150" rx="8" fill="#FFF0E3" stroke="#C86F2D" stroke-width="2"/>
+<text x="1210" y="578" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">Analytical Backends</text>
+<text x="1210" y="605" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Compute: replay ns</text>
+<text x="1210" y="627" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Memory: L + S/B</text>
+<text x="1210" y="649" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">Network: collective events</text>
+<rect x="1360" y="520" width="180" height="120" rx="8" fill="#EAF3EC" stroke="#4D7C5D" stroke-width="2"/>
+<text x="1450" y="548" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">输出指标</text>
+<text x="1450" y="575" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">TTFT / TPOT / ITL</text>
+<text x="1450" y="597" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="18" font-weight="400" fill="#17324D">throughput / clocks</text>
+<rect x="560" y="770" width="520" height="70" rx="8" fill="#FFFFFF" stroke="#17324D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="820" y="811" text-anchor="middle" font-family="Noto Sans CJK SC" font-size="22" font-weight="700" fill="#17324D">完成事件更新状态 → 新一轮调度；空闲时跳到下一到达时刻</text>
+</svg>

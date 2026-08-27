@@ -1,0 +1,8 @@
+{
+  "label": "模拟器",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "运行 LLM 服务模拟。"
+  }
+}

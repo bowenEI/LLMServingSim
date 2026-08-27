@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{为什么需要周期级模型}{3}{0}{1}
+\beamer@sectionintoc {2}{系统执行机制}{6}{0}{2}
+\beamer@sectionintoc {3}{计算时延模型}{10}{0}{3}
+\beamer@sectionintoc {4}{访存与通信时延模型}{15}{0}{4}
+\beamer@sectionintoc {5}{从节点到全局时钟}{22}{0}{5}

@@ -1,0 +1,8 @@
+{
+  "label": "性能剖析器",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "使用基于 vLLM 的逐层剖析器生成每硬件延迟 profile。"
+  }
+}

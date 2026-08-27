@@ -1,0 +1,8 @@
+{
+  "label": "调度",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "每实例调度器如何决定每轮运行什么：连续批处理、前缀缓存机制与 KV 缓存内存记账。"
+  }
+}

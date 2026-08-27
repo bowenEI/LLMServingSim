@@ -1,0 +1,8 @@
+{
+  "label": "专项主题",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "专项子系统：PIM 侧 attention 卸载（计算分离到内存）与每节点功耗模型。"
+  }
+}

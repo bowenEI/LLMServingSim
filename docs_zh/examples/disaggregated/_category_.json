@@ -1,0 +1,8 @@
+{
+  "label": "分离式服务",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "多实例设置（路由器级调度）、prefill/decode 分离与 PIM attention 卸载——工作跨实例或设备拆分的生产风格拓扑。"
+  }
+}

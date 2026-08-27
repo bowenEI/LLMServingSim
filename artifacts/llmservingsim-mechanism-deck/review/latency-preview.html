@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>latency-model.drawio</title>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #f7f7f7; }
+  iframe { border: 0; width: 100vw; height: 100vh; display: block; }
+</style>
+</head>
+<body>
+<iframe id="drawio" src="https://embed.diagrams.net/?embed=1&proto=json&spin=1&ui=atlas&libraries=0&grid=0&pv=0"></iframe>
+<script>
+const xml = "<?xml version='1.0' encoding='utf-8'?>\n<mxfile host=\"app.diagrams.net\" agent=\"Codex\" version=\"26.0.9\" pages=\"1\">\n  <diagram id=\"latency-model\" name=\"\u8ba1\u7b97\u3001\u8bbf\u5b58\u4e0e\u901a\u4fe1\u65f6\u5ef6\u5982\u4f55\u6c47\u805a\u4e3a\u4e00\u6b21\u8fed\u4ee3\">\n    <mxGraphModel page=\"1\" pageWidth=\"1600\" pageHeight=\"900\" grid=\"1\" gridSize=\"10\" guides=\"1\" tooltips=\"1\" connect=\"1\" arrows=\"1\" fold=\"1\" pageScale=\"1\" pageBackgroundColor=\"#FFFFFF\">\n      <root>\n        <mxCell id=\"0\" />\n        <mxCell id=\"1\" parent=\"0\" />\n        <mxCell id=\"title\" value=\"&lt;b&gt;\u8ba1\u7b97\u3001\u8bbf\u5b58\u4e0e\u901a\u4fe1\u65f6\u5ef6\u5982\u4f55\u6c47\u805a\u4e3a\u4e00\u6b21\u8fed\u4ee3&lt;/b&gt;\" style=\"text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=28;fontColor=#17324D;align=center;verticalAlign=middle;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"40\" y=\"20\" width=\"1520\" height=\"50\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"subtitle\" value=\"\u6d4b\u91cf\u9a71\u52a8\u7684\u8ba1\u7b97\u8282\u70b9 + \u89e3\u6790\u5185\u5b58/\u7f51\u7edc\u8282\u70b9 + DAG \u5173\u952e\u8def\u5f84\" style=\"text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=14;fontColor=#60758A;align=center;verticalAlign=middle;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"40\" y=\"70\" width=\"1520\" height=\"30\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"shape\" value=\"&lt;b&gt;\u4e00\u6b21\u8fed\u4ee3\u7684\u8f93\u5165\u5f62\u72b6&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;x = (T, Nseq, prefill_chunk, kv_prefill, n_decode, kv_decode, TP, PP, EP, placement)&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F4F7F9;strokeColor=#AAB7C4;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=19;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"50\" y=\"130\" width=\"1500\" height=\"70\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"comp\" value=\"&lt;b&gt;\u8ba1\u7b97\u65f6\u5ef6\uff1a\u6d4b\u91cf\u9a71\u52a8&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;CSV: time_us \u2192 round(1000\u00b7time_us) ns&lt;br&gt;1D: t(x)=t0+(x\u2212x0)(t1\u2212t0)/(x1\u2212x0)&lt;br&gt;Attention: 4D \u591a\u7ebf\u6027\u63d2\u503c&lt;br&gt;Skew: t=tmean+\u03b1(tmax\u2212tmean)&lt;br&gt;MoE: max_r lookup(tokens_r, experts_r)&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E8F2FA;strokeColor=#2F6B9A;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=20;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"60\" y=\"250\" width=\"440\" height=\"240\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"mem\" value=\"&lt;b&gt;\u8bbf\u5b58\u65f6\u5ef6\uff1a\u5bb9\u91cf + \u6392\u961f&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;KV/token/rank = 2\u00b7Hkv\u00b7Dhead\u00b7L\u00b7bkv / Nnpu&lt;br&gt;Nblock=floor((u\u00b7MNPU\u2212W)/Bblock)&lt;br&gt;tmem(S)=Lmem+floor(S/Bmem)&lt;br&gt;PER_NODE / POOL\uff1a\u540c\u8bbe\u5907 FIFO \u4e32\u884c&lt;br&gt;write-through \u53ea\u8ba1\u80fd\u8017\uff1brecall \u5728\u5173\u952e\u8def\u5f84&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#2A7F72;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=20;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"580\" y=\"250\" width=\"440\" height=\"240\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"comm\" value=\"&lt;b&gt;\u901a\u4fe1\u65f6\u5ef6\uff1a\u6d88\u606f + collective&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;TP: S_AR = T\u00b7H\u00b7b&lt;br&gt;P/D: S_KV = 2\u00b7Hkv\u00b7Dhead\u00b7T\u00b7bkv / TP&lt;br&gt;EP: AG[(H+E)b], RS[Hb]&lt;br&gt;\u5355\u8df3: t=h\u00b7Llink+S/Blink&lt;br&gt;Ring \u8fd1\u4f3c: AR\u22482(N\u22121)(L+S/(N\u00b7B))&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF0E3;strokeColor=#C86F2D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=20;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"1100\" y=\"250\" width=\"440\" height=\"240\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"dag\" value=\"&lt;b&gt;\u7edf\u4e00\u4e3a Chakra DAG \u7684\u5173\u952e\u8def\u5f84&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;start(v)=max_{u\u2208pred(v)} finish(u)&lt;br&gt;finish(v)=start(v)+d(v),  d(v)\u2208{tcomp,tmem,tcomm}&lt;br&gt;Titer=max_{v\u2208sink} finish(v)\uff1b\u91cd\u53e0\u7531\u4f9d\u8d56\u4e0e\u8d44\u6e90\u961f\u5217\u81ea\u7136\u4ea7\u751f\uff0c\u800c\u4e0d\u662f\u7b80\u5355\u6c42\u548c&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#17324D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"180\" y=\"620\" width=\"1240\" height=\"180\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"legend_comp\" value=\"&lt;b&gt;COMP_NODE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;profile / replay&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E8F2FA;strokeColor=#2F6B9A;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"60\" y=\"530\" width=\"440\" height=\"50\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"legend_mem\" value=\"&lt;b&gt;MEM_NODE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;analytical memory&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#2A7F72;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"580\" y=\"530\" width=\"440\" height=\"50\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"legend_comm\" value=\"&lt;b&gt;COMM_NODE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;analytical network&lt;/font&gt;\" style=\"rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF0E3;strokeColor=#C86F2D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\">\n          <mxGeometry x=\"1100\" y=\"530\" width=\"440\" height=\"50\" as=\"geometry\" />\n        </mxCell>\n        <mxCell id=\"s1\" value=\"kernel shape\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2F6B9A;fontColor=#2F6B9A;fontFamily=Noto Sans CJK SC;fontSize=12;labelBackgroundColor=#FFFFFF;\" edge=\"1\" parent=\"1\" source=\"shape\" target=\"comp\">\n          <mxGeometry relative=\"1\" as=\"geometry\">\n            <Array as=\"points\">\n              <mxPoint x=\"280\" y=\"220\" />\n              <mxPoint x=\"280\" y=\"240\" />\n            </Array>\n          </mxGeometry>\n        </mxCell>\n        <mxCell id=\"s2\" value=\"bytes / tier\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2A7F72;fontColor=#2A7F72;fontFamily=Noto Sans CJK SC;fontSize=12;labelBackgroundColor=#FFFFFF;\" edge=\"1\" parent=\"1\" source=\"shape\" target=\"mem\">\n          <mxGeometry relative=\"1\" as=\"geometry\">\n            <Array as=\"points\">\n              <mxPoint x=\"800\" y=\"220\" />\n              <mxPoint x=\"800\" y=\"240\" />\n            </Array>\n          </mxGeometry>\n        </mxCell>\n        <mxCell id=\"s3\" value=\"group / size\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#C86F2D;fontColor=#C86F2D;fontFamily=Noto Sans CJK SC;fontSize=12;labelBackgroundColor=#FFFFFF;\" edge=\"1\" parent=\"1\" source=\"shape\" target=\"comm\">\n          <mxGeometry relative=\"1\" as=\"geometry\">\n            <Array as=\"points\">\n              <mxPoint x=\"1320\" y=\"220\" />\n              <mxPoint x=\"1320\" y=\"240\" />\n            </Array>\n          </mxGeometry>\n        </mxCell>\n        <mxCell id=\"c1\" value=\"COMP_NODE\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2F6B9A;fontColor=#2F6B9A;fontFamily=Noto Sans CJK SC;fontSize=12;labelBackgroundColor=#FFFFFF;\" edge=\"1\" parent=\"1\" source=\"comp\" target=\"dag\">\n          <mxGeometry relative=\"1\" as=\"geometry\">\n            <Array as=\"points\">\n              <mxPoint x=\"280\" y=\"570\" />\n              <mxPoint x=\"800\" y=\"570\" />\n              <mxPoint x=\"800\" y=\"600\" />\n            </Array>\n          </mxGeometry>\n        </mxCell>\n        <mxCell id=\"m1\" value=\"MEM_NODE\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2A7F72;fontColor=#2A7F72;fontFamily=Noto Sans CJK SC;fontSize=12;labelBackgroundColor=#FFFFFF;\" edge=\"1\" parent=\"1\" source=\"mem\" target=\"dag\">\n          <mxGeometry relative=\"1\" as=\"geometry\">\n            <Array as=\"points\">\n              <mxPoint x=\"800\" y=\"570\" />\n              <mxPoint x=\"800\" y=\"600\" />\n            </Array>\n          </mxGeometry>\n        </mxCell>\n        <mxCell id=\"n1\" value=\"COMM_NODE\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#C86F2D;fontColor=#C86F2D;fontFamily=Noto Sans CJK SC;fontSize=12;labelBackgroundColor=#FFFFFF;\" edge=\"1\" parent=\"1\" source=\"comm\" target=\"dag\">\n          <mxGeometry relative=\"1\" as=\"geometry\">\n            <Array as=\"points\">\n              <mxPoint x=\"1320\" y=\"570\" />\n              <mxPoint x=\"800\" y=\"570\" />\n              <mxPoint x=\"800\" y=\"600\" />\n            </Array>\n          </mxGeometry>\n        </mxCell>\n      </root>\n    </mxGraphModel>\n  </diagram>\n</mxfile>";
+const diagramTitle = "latency-model.drawio";
+const DRAWIO_ORIGIN = 'https://embed.diagrams.net';
+const iframe = document.getElementById('drawio');
+let loaded = false;
+function downloadXml(savedXml) {
+  const blob = new Blob([savedXml], { type: 'application/xml' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  const cleanTitle = diagramTitle.endsWith('.drawio') ? diagramTitle : `${diagramTitle}.drawio`;
+  link.href = url;
+  link.download = cleanTitle;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function sendLoad() {
+  iframe.contentWindow.postMessage(JSON.stringify({
+    action: 'load',
+    autosave: 0,
+    modified: 0,
+    title: diagramTitle,
+    xml
+  }), DRAWIO_ORIGIN);
+}
+window.__drawioPreview = {
+  requestSave: () => iframe.contentWindow.postMessage(JSON.stringify({ action: 'save' }), DRAWIO_ORIGIN)
+};
+window.addEventListener('message', (evt) => {
+  if (evt.source !== iframe.contentWindow || evt.origin !== DRAWIO_ORIGIN) return;
+  let msg = evt.data;
+  try { if (typeof msg === 'string') msg = JSON.parse(msg); } catch (e) { return; }
+  if (!msg) return;
+  if (msg.event === 'save' && msg.xml) {
+    downloadXml(msg.xml);
+    iframe.contentWindow.postMessage(JSON.stringify({
+      action: 'status',
+      modified: false,
+      message: 'Downloaded .drawio file'
+    }), DRAWIO_ORIGIN);
+    return;
+  }
+  if (!loaded && (msg.event === 'init' || msg.event === 'configure')) {
+    loaded = true;
+    sendLoad();
+  }
+});
+setTimeout(() => { if (!loaded) sendLoad(); }, 2500);
+</script>
+</body>
+</html>

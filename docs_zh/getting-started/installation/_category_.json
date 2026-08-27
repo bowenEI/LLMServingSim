@@ -1,0 +1,9 @@
+{
+  "label": "安装",
+  "position": 2,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "从一台干净的机器到可用的 LLMServingSim 安装。从前置条件开始，然后设置模拟器环境。vLLM 环境是可选的，只在需要剖析新硬件或运行端到端基准时使用。"
+  }
+}

@@ -103,6 +103,18 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'zh',
+        path: '../docs_zh',
+        routeBasePath: 'zh',
+        sidebarPath: './sidebars-zh.ts',
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/social-card.png',
     colorMode: {
@@ -159,6 +171,13 @@ const config: Config = {
           sidebarId: 'contributorSidebar',
           position: 'left',
           label: 'For Contributors',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'zhSidebar',
+          docsPluginId: 'zh',
+          position: 'left',
+          label: '中文文档',
         },
         {
           to: '/changelog',

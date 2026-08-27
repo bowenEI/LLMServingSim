@@ -1,0 +1,15 @@
+{
+  "file": "artifacts/llmservingsim-mechanism-deck/diagrams/system-mechanism.drawio",
+  "summary": {
+    "total_findings": 0,
+    "fail": 0,
+    "warn": 0,
+    "passed": true,
+    "clean": true
+  },
+  "fails": [],
+  "warns": [],
+  "vertex_count": 17,
+  "edge_count": 17,
+  "canvas": "1600x900"
+}

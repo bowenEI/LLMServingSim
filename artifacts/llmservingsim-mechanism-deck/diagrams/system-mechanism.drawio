@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="Codex" version="26.0.9" pages="1">
+  <diagram id="system-mechanism" name="LLMServingSim 2.0：周期级协同仿真的闭环机制">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageBackgroundColor="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;LLMServingSim 2.0：周期级协同仿真的闭环机制&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=28;fontColor=#17324D;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1520" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Python 前端复现服务语义，Chakra 表达依赖，ASTRA-Sim 推进硬件事件" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=14;fontColor=#60758A;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="config" value="&lt;b&gt;配置与工作负载&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;cluster/model JSON&lt;br&gt;workload JSONL&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F4F7F9;strokeColor=#AAB7C4;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="130" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="profiler" value="&lt;b&gt;vLLM Layerwise Profiler&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;真实 kernel 路径&lt;br&gt;TP 单卡形状仿真&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E8F2FA;strokeColor=#2F6B9A;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="perfdb" value="&lt;b&gt;性能数据库&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;dense / attention&lt;br&gt;per-seq / MoE CSV&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E8F2FA;strokeColor=#2F6B9A;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="130" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="router" value="&lt;b&gt;Router&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;到达时间&lt;br&gt;实例路由&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F4F7F9;strokeColor=#AAB7C4;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="330" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="scheduler" value="&lt;b&gt;Scheduler&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;continuous batching&lt;br&gt;token/seq/KV 预算&lt;br&gt;running → waiting&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF3EC;strokeColor=#4D7C5D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="310" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="batch" value="&lt;b&gt;Batch 快照&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;scheduled_tokens&lt;br&gt;Q/K 列表与命中&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF3EC;strokeColor=#4D7C5D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="550" y="330" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="trace" value="&lt;b&gt;Trace Generator&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;遍历架构 sequence&lt;br&gt;查表/插值 comp_time&lt;br&gt;tensor bytes + comm_size&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E8F2FA;strokeColor=#2F6B9A;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="300" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="chakra" value="&lt;b&gt;Chakra Converter&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;trace rows → ET DAG&lt;br&gt;COMP/MEM/COMM&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F4F7F9;strokeColor=#AAB7C4;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="320" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="astra" value="&lt;b&gt;ASTRA-Sim&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;依赖就绪发射&lt;br&gt;解析网络 + 内存&lt;br&gt;返回全局 cycle&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF0E3;strokeColor=#C86F2D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="300" width="210" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="kv" value="&lt;b&gt;Tiered KV Manager&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;block hash / refcount&lt;br&gt;NPU 命中 + 下层召回&lt;br&gt;preemption/recompute&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#2A7F72;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="550" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="memory" value="&lt;b&gt;NPU / CPU / CXL&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;容量与块池&lt;br&gt;召回进入关键路径&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E7F4F1;strokeColor=#2A7F72;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="550" y="570" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dag" value="&lt;b&gt;Chakra ET DAG&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;数据依赖&lt;br&gt;关键路径决定完成时刻&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F4F7F9;strokeColor=#AAB7C4;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="570" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" value="&lt;b&gt;Analytical Backends&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;Compute: replay ns&lt;br&gt;Memory: L + S/B&lt;br&gt;Network: collective events&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFF0E3;strokeColor=#C86F2D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="550" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="metrics" value="&lt;b&gt;输出指标&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:18px&quot;&gt;TTFT / TPOT / ITL&lt;br&gt;throughput / clocks&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EAF3EC;strokeColor=#4D7C5D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="520" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="loop" value="&lt;b&gt;完成事件更新状态 → 新一轮调度；空闲时跳到下一到达时刻&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=#FFFFFF;strokeColor=#17324D;strokeWidth=2;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=22;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="560" y="770" width="520" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="请求到达" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#AAB7C4;fontColor=#AAB7C4;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="config" target="router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="模型/硬件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#AAB7C4;fontColor=#AAB7C4;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="config" target="profiler">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="time_us" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2F6B9A;fontColor=#2F6B9A;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="profiler" target="perfdb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="按维查表" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2F6B9A;fontColor=#2F6B9A;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="perfdb" target="trace">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="入队" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#4D7C5D;fontColor=#4D7C5D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="router" target="scheduler">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="调度快照" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#4D7C5D;fontColor=#4D7C5D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="scheduler" target="batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="形状参数" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2F6B9A;fontColor=#2F6B9A;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="batch" target="trace">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="11 字段 rows" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2F6B9A;fontColor=#2F6B9A;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="trace" target="chakra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value=".et 工作负载" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#C86F2D;fontColor=#C86F2D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="chakra" target="astra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="分配/回收" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2A7F72;fontColor=#2A7F72;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="scheduler" target="kv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="块驻留/召回" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#2A7F72;fontColor=#2A7F72;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="kv" target="memory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="节点属性" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#AAB7C4;fontColor=#AAB7C4;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="trace" target="dag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="就绪节点" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#C86F2D;fontColor=#C86F2D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dag" target="backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="完成事件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#C86F2D;fontColor=#C86F2D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="backend" target="astra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="cycle" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#4D7C5D;fontColor=#4D7C5D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="astra" target="metrics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="完成通知" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#17324D;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="metrics" target="loop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1450" y="750" />
+              <mxPoint x="1080" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="状态反馈" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=3;strokeColor=#17324D;fontColor=#17324D;fontFamily=Noto Sans CJK SC;fontSize=14;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="loop" target="scheduler">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="800" />
+              <mxPoint x="520" y="500" />
+              <mxPoint x="390" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
