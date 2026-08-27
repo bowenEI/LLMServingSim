@@ -44,7 +44,7 @@ Stage 1 compares every scenario against the `Total clocks (ns)` in
 `outputs/sim.csv` and `validation/summary.txt` and checks their md5s. Anything
 that moved is printed as a markdown table to paste into the PR — a difference
 is not automatically a bug, but it always needs an explanation. See
-[Validating your changes](https://llmservingsim.ai/docs/contributor/validating-changes).
+[Validating your changes](https://llmservingsim.ai/en/contributor/validating-changes).
 
 ## Architecture
 

@@ -8,7 +8,7 @@ Enable PIM by setting `pim_config` in the cluster config's `cpu_mem` section and
 passing `--enable-attn-offloading` to `python -m serving`.
 
 Full schema, including which keys are inert:
-[Reference → PIM config](https://llmservingsim.ai/docs/reference/pim-config).
+[Reference → PIM config](https://llmservingsim.ai/en/reference/pim-config).
 
 ## Provided configs
 

@@ -141,7 +141,24 @@ for (const file of srcFiles) {
 }
 
 console.log(`checked ${htmlFiles.length} built pages and ${diagramCount} mermaid diagrams`);
-if (findings.size === 0 && mermaidProblems.length === 0) {
+
+const languageProblems = [];
+for (const file of htmlFiles) {
+  const relativePath = relative(buildDir, file);
+  const expected = relativePath === 'zh.html' || relativePath.startsWith('zh/')
+    ? 'zh-CN'
+    : 'en';
+  const match = readFileSync(file, 'utf8').match(/<html\s+lang=([^ >]+)/);
+  if (!match || match[1] !== expected) {
+    languageProblems.push(`${relativePath} expected lang=${expected}`);
+  }
+}
+if (languageProblems.length > 0) {
+  console.log('\nhtml-language: built pages have the wrong language attribute');
+  for (const problem of languageProblems) console.log(`  ${problem}`);
+}
+
+if (findings.size === 0 && mermaidProblems.length === 0 && languageProblems.length === 0) {
   console.log('no unparsed markup found');
   process.exit(0);
 }
@@ -155,6 +172,6 @@ for (const [name, {why, hits}] of findings) {
   console.log(`\n${name}: ${why}`);
   for (const h of [...hits].sort()) console.log(`  ${h}`);
 }
-const total = [...findings.values()].reduce((n, f) => n + f.hits.size, 0) + mermaidProblems.length;
+const total = [...findings.values()].reduce((n, f) => n + f.hits.size, 0) + mermaidProblems.length + languageProblems.length;
 console.log(`\n${total} finding(s).`);
 process.exit(1);

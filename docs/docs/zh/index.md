@@ -1,13 +1,25 @@
+---
+slug: /
+title: LLMServingSim 中文文档
+sidebar_label: 文档首页
+---
+
 # LLMServingSim 2.0 中文文档
 
-> 本目录是 LLMServingSim 官方文档（`docs/docs/`，站点 [https://llmservingsim.ai](https://llmservingsim.ai)）的**中文翻译镜像**，目录结构与英文原版一一对应：每个英文页面对应一份简体中文页面。
->
-> 内容覆盖模拟器、性能剖析器（Profiler）、基准验证（Bench）、工作负载、配置参考与贡献指南。数值、命令与行为以代码和官方站点为准。
+本文档与英文文档一起部署在 [https://llmservingsim.ai](https://llmservingsim.ai)：英文位于 `/en`，中文位于 `/zh`。导航栏中的语言菜单会在中英文对应页面之间切换。
+
+内容覆盖模拟器、性能剖析器（Profiler）、基准验证（Bench）、工作负载、配置参考与贡献指南。数值、命令与行为以代码和官方站点为准。
+
+- **初次使用：** 从[快速开始概述](/zh/getting-started/overview)开始。
+- **运行模拟器：** 阅读[快速入门](/zh/getting-started/quickstart)。
+- **理解内部实现：** 阅读[模拟器架构](/zh/simulator/architecture)。
+- **查询配置：** 浏览 [CLI 参数参考](/zh/reference/cli-flags)。
+- **参与贡献：** 阅读[贡献者指南](/zh/contributor/welcome)。
 
 ## 目录结构
 
 ```
-docs_zh/
+docs/docs/
 ├── getting-started/          # 快速开始：概述、前置条件、安装（模拟器 / vLLM）、快速入门、故障排查
 ├── simulator/                # 模拟器：架构、请求生命周期、调度（连续批处理 / 前缀缓存 / KV 缓存与内存）、
 │   │                         #   轨迹生成、并行机制、MoE 专家路由、专项主题（PIM 卸载 / 功耗模型）、输出解读
@@ -31,6 +43,6 @@ docs_zh/
 
 ## 与英文原版的关系
 
-- 目录与文件名与 `docs/docs/` 保持一致；源为 `.mdx` 的页面在镜像中统一为 `.md`（MDX 的 JSX 组件已改写为普通 Markdown）。
-- 页面内相对链接指向镜像内的同名文件，可直接跳转；绝对站点链接（`/docs/...`）已改写为相对路径。
-- 英文原版更新后，本镜像可能滞后；以官方站点为准。
+- 目录与文件名与 `docs/docs/en/` 保持一致；源为 `.mdx` 的页面在中文树中也保留 `.mdx` 扩展名。
+- 页面内相对链接指向镜像内的同名文件，可直接跳转。
+- 英文原版更新后，本镜像可能滞后；以代码行为和英文文档为准。

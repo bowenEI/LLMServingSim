@@ -9,7 +9,7 @@
     "prebuild": "node scripts/sync-changelog.mjs",
     "preserve": "node scripts/sync-changelog.mjs",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "node scripts/check-doc-tree.mjs && docusaurus build && node scripts/set-html-lang.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -17,7 +17,9 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
+    "check-doc-tree": "node scripts/check-doc-tree.mjs",
     "check-rendered": "node scripts/check-rendered.mjs",
+    "set-html-lang": "node scripts/set-html-lang.mjs",
     "postbuild": "node scripts/check-rendered.mjs"
   },
   "dependencies": {

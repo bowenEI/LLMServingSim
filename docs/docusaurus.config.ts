@@ -74,13 +74,17 @@ const config: Config = {
         hashed: true,
         indexBlog: false,
         indexPages: true,
-        docsRouteBasePath: '/docs',
+        docsRouteBasePath: ['/en', '/zh'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
       },
     ],
   ],
 
+  // The two documentation trees are separate content plugins so that their
+  // public URLs remain stable and explicit: /en and /zh. The language menu is
+  // implemented as a custom navbar item because Docusaurus' locale dropdown
+  // only switches native i18n locales, not content-plugin routes.
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -91,9 +95,11 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: 'en',
+          path: './docs/en',
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/casys-kaist/LLMServingSim/tree/main/website/',
+            'https://github.com/casys-kaist/LLMServingSim/tree/main/docs/docs/en/',
         },
         blog: false,
         theme: {
@@ -108,9 +114,11 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'zh',
-        path: '../docs_zh',
+        path: './docs/zh',
         routeBasePath: 'zh',
         sidebarPath: './sidebars-zh.ts',
+        editUrl:
+          'https://github.com/casys-kaist/LLMServingSim/tree/main/docs/docs/zh/',
       },
     ],
   ],
@@ -173,11 +181,8 @@ const config: Config = {
           label: 'For Contributors',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'zhSidebar',
-          docsPluginId: 'zh',
-          position: 'left',
-          label: '中文文档',
+          type: 'custom-languageSwitcher',
+          position: 'right',
         },
         {
           to: '/changelog',
@@ -202,10 +207,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {label: 'Getting Started', to: '/docs/getting-started/overview'},
-            {label: 'Simulator', to: '/docs/simulator/architecture'},
-            {label: 'Profiler', to: '/docs/profiler/overview'},
-            {label: 'Reference', to: '/docs/reference/cli-flags'},
+            {label: 'Getting Started', to: '/en/getting-started/overview'},
+            {label: 'Simulator', to: '/en/simulator/architecture'},
+            {label: 'Profiler', to: '/en/profiler/overview'},
+            {label: 'Reference', to: '/en/reference/cli-flags'},
           ],
         },
         {

@@ -5,37 +5,25 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ## Installation
 
 ```bash
-yarn
+pnpm install
 ```
 
 ## Local Development
 
 ```bash
-yarn start
+pnpm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server. English documentation is available under `/en`; Chinese documentation is available under `/zh`.
 
 ## Build
 
 ```bash
-yarn build
+pnpm build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command first verifies that `docs/en/` and `docs/zh/` contain exactly the same relative file paths, then builds both trees into the same `build` directory. English pages are emitted under `build/en/`, and Chinese pages under `build/zh/`; the artifact can be served by any static content host.
 
 ## Deployment
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Deployment is handled by GitHub Actions in `.github/workflows/deploy-docs.yml`. English sources live in `docs/en/` and Chinese sources in `docs/zh/`; changes to either tree rebuild the single Pages artifact, so both languages are deployed together. The custom domain is configured in `static/CNAME`.

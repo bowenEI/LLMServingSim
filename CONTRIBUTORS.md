@@ -91,4 +91,4 @@ several releases.
 ---
 
 Interested in contributing? See the
-[contributor guide](https://llmservingsim.ai/docs/contributor/welcome).
+[contributor guide](https://llmservingsim.ai/en/contributor/welcome).

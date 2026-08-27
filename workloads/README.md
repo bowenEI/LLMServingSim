@@ -98,7 +98,7 @@ executions.
 subcommand, `sharegpt`; this file was produced out of band and committed. To
 build your own agentic workload, emit the JSONL directly — the schema is above,
 and the format reference is
-[Workloads → JSONL format](https://llmservingsim.ai/docs/workloads/jsonl-format).
+[Workloads → JSONL format](https://llmservingsim.ai/en/workloads/jsonl-format).
 
 ### Other
 | File | Description |
@@ -157,7 +157,7 @@ the generator records only token counts and ids, so a high
 workload should be simulated at.
 
 Full flag reference:
-[Workloads → ShareGPT generators](https://llmservingsim.ai/docs/workloads/sharegpt-generators).
+[Workloads → ShareGPT generators](https://llmservingsim.ai/en/workloads/sharegpt-generators).
 
 To create a workload manually, write JSON objects to a `.jsonl` file
 following the format above and pass the file path via `--dataset` to

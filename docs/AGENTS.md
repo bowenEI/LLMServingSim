@@ -46,21 +46,17 @@ the build).
 docs/
 ├── docusaurus.config.ts        site metadata, navbar, footer, theme
 ├── sidebars.ts                 sidebar trees (userSidebar, contributorSidebar)
-├── docs/                       markdown content (one folder per top-level section)
-│   ├── getting-started/
-│   ├── simulator/
-│   ├── profiler/
-│   ├── bench/
-│   ├── validation/
-│   ├── workloads/
-│   ├── reference/
-│   └── contributor/
+├── docs/                       bilingual markdown content
+│   ├── en/                      English pages (served under /en)
+│   └── zh/                      Chinese pages (served under /zh)
 ├── src/
 │   ├── pages/index.tsx         landing page (Hero + feature cards)
 │   ├── pages/index.module.css  landing page styles
 │   ├── components/
 │   │   └── HomepageFeatures/   the four feature cards on the landing page
 │   └── css/custom.css          global theme overrides (primary color, etc.)
+├── scripts/check-doc-tree.mjs   verifies identical English/Chinese paths
+├── src/theme/                  language switcher and route language metadata
 └── static/
     ├── CNAME                   custom domain (llmservingsim.ai)
     └── img/                    favicon, logo, social card
@@ -155,12 +151,14 @@ step is silently a no-op if the source is set to anything else.
 
 ## Conventions
 
-- **Language**: English only. Match the rest of the LLMServingSim repo.
+- **Language**: English pages live under `docs/docs/en/`; matching Simplified Chinese pages live under `docs/docs/zh/`. Keep the two trees structurally aligned when adding or moving a page.
 - **Code blocks**: always specify the language (` ```bash `, ` ```python `,
   ` ```yaml `). The site's Prism config preloads bash, python, json, yaml.
 - **Images**: under `static/img/`, reference as `/img/<file>.png`.
-- **Internal links**: use relative paths like `/docs/simulator/cli-overview`,
-  not full URLs. `onBrokenLinks: 'throw'` will fail the build on dead links.
+- **Internal links**: use `/en/...` for English documentation and relative
+  links within `docs/docs/zh/` for Chinese documentation. The site is deployed with
+  English under `/en` and Chinese under `/zh`. `onBrokenLinks: 'throw'` will
+  fail the build on dead links.
 - **Component names**: PascalCase (`HomepageFeatures`).
 - **File naming**: `kebab-case.md` for docs, matches the URL slug.
 - **Admonitions**: the title goes in **brackets** — `:::caution[Title here]`,
@@ -179,7 +177,7 @@ step is silently a no-op if the source is set to anything else.
 
 ## Checks that run on the site
 
-- `pnpm build` runs two hooks around it. `prebuild` regenerates
+- `pnpm build` first checks that `docs/en/` and `docs/zh/` have identical file paths, then runs two hooks around the Docusaurus build. `prebuild` regenerates
   `src/pages/changelog.md` from the repo-root `CHANGELOG.md`
   (`scripts/sync-changelog.mjs`) — **edit `CHANGELOG.md` only**; the page is
   generated, and committed so a fresh clone works. `postbuild` runs
@@ -210,10 +208,12 @@ These are deferred until the site has more content and traction:
 - Full content for any docs page (most are stubs)
 - Algolia DocSearch integration
 - Versioned docs (latest vs. v1.x.y)
-- Internationalization
 - Versioned changelog page (footer "Changelog" still links out to GitHub)
 - Blog
 - API reference auto-generation from Python source
+
+The site supports English and Simplified Chinese documentation under `/en` and
+`/zh`; non-document pages remain English-only. Changes to `docs/` trigger the combined deployment workflow.
 
 ## Reference site
 
